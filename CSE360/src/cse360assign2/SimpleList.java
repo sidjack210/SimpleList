@@ -1,5 +1,5 @@
 /**
- * Sidney Jackson, Class ID: 414, Assignment 1
+ * Sidney Jackson, Class ID: 414, Assignment 2
  * SimpleList.java creates a list where elements can be added.
  * removed, searched, counted, and become a string.
  */
@@ -27,35 +27,21 @@ public class SimpleList
 	 */
 	public void add(int index)
 	{
-		   if (count == 0) 
+		   if (count == list.length) 
 		   {
-	           list[count] = index;
-	           count++;
+	           int half = count / 2;
+	           resize(count + half);
 	       } 
 		   
-		   else if (count < 10)
-		   {
-	           for (int j = count; j >= 0; j--) 
+		  for (int j = count; j > 0; j--) 
 	           {
-	               list[j + 1] = list[j];
+	               list[j] = list[j-1];
 	           }
 	           
 	           list[0] = index;
 	           count++;
-	       } 
-		   
-		   else 
-		   {
-	           list[count - 1] = 0;
-	           
-	           for (int k = count; k >= 0; k--)
-	           {
-	               list[k + 1] = list[k];
-	           }
-	           
-	           list[0] = index;
-	           count++;
-	       }
+	           System.out.println("Number added");
+	       
 	       
 	}
 	
