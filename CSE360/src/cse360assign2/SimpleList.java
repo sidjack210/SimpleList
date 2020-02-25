@@ -45,6 +45,23 @@ public class SimpleList
 	       
 	}
 	
+	private void resize(int newSize)
+	{
+		int array[] = new int[newSize];
+		
+		for(int i = 0; i < newSize && i < count; i++)
+		{
+			array[i] = list[i];
+		}
+		
+		list = array;
+		
+		if(newSize < count)
+		{
+			count = newSize;
+		}
+	}
+	
 	/**
 	 * the method remove, removes the paramenter num from the list 
 	 * then adjusts the rest of the elements in the list and updates count.
