@@ -95,6 +95,18 @@ public class SimpleList
 	       }
 	       
 	   }
+	
+	public void append(int num)
+	{
+		if(num == list.length)
+		{
+			int half = count / 2;
+			resize(count + half);
+		}
+		
+		list[count] = num;
+		count ++;
+	}
 
 	   /**
 	    * the method count just returns the updated count
