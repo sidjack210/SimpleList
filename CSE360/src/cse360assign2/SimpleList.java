@@ -87,6 +87,13 @@ public class SimpleList
 	       {
 	           System.out.println(num + " not found");
 	       }
+	       
+	       int b = 3 * list.length / 4;
+	       if(count < b)
+	       {
+	    	   resize(count);
+	       }
+	       
 	   }
 
 	   /**
