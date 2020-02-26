@@ -22,7 +22,8 @@ public class SimpleList
 	/**
 	 * the method add adds the parameter index to the index of the list
 	 * and shifts the rest of the elements to the next index over
-	 * and increments count
+	 * and increments count.
+	 * if the list is full then the size increases by 50%
 	 * @param index
 	 */
 	public void add(int index)
@@ -44,7 +45,11 @@ public class SimpleList
 	       
 	       
 	}
-	
+	/*
+	 * resizes the array to a given newSize
+	 * copies elements to a new array then replaces 
+	 * the old array with a new one
+	 */
 	private void resize(int newSize)
 	{
 		int array[] = new int[newSize];
@@ -65,6 +70,7 @@ public class SimpleList
 	/**
 	 * the method remove, removes the paramenter num from the list 
 	 * then adjusts the rest of the elements in the list and updates count.
+	 * resizes the list if there is more than 25% open spots
 	 * @param num
 	 */
 	public void remove(int num)
@@ -95,7 +101,10 @@ public class SimpleList
 	       }
 	       
 	   }
-	
+	/*
+	 * adds the parameter num to the beginning of the list.
+	 * if the list is full then the size increases
+	 */
 	public void append(int num)
 	{
 		if(num == list.length)
@@ -108,6 +117,10 @@ public class SimpleList
 		count ++;
 	}
 	
+	/*
+	 * if the list is empty throws an exception
+	 * otherwise, returns the first element in the list
+	 */
 	public int first()
 	{
 		if (count == 0)
@@ -118,6 +131,10 @@ public class SimpleList
 		return list[0];
 	}
 	
+	/**
+	 * method returns the length of the list
+	 * @return
+	 */
 	public int size()
 	{
 		return list.length;
