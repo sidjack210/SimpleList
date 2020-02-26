@@ -107,6 +107,21 @@ public class SimpleList
 		list[count] = num;
 		count ++;
 	}
+	
+	public int first()
+	{
+		if (count == 0)
+		{
+			throw new RuntimeException("list is empty");
+		}
+		
+		return list[0];
+	}
+	
+	public int size()
+	{
+		return list.length;
+	}
 
 	   /**
 	    * the method count just returns the updated count
