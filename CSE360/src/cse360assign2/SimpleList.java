@@ -19,6 +19,7 @@ public class SimpleList
 		this.count = 0;
 		this.list = new int[10];
 	}
+	
 	/**
 	 * the method add adds the parameter index to the index of the list
 	 * and shifts the rest of the elements to the next index over
@@ -42,9 +43,9 @@ public class SimpleList
 	           list[0] = index;
 	           count++;
 	           System.out.println("Number added");
-	       
-	       
+	 
 	}
+	
 	/*
 	 * resizes the array to a given newSize
 	 * copies elements to a new array then replaces 
@@ -98,9 +99,9 @@ public class SimpleList
 	       if(count < b)
 	       {
 	    	   resize(count);
-	       }
-	       
+	       } 
 	   }
+	
 	/*
 	 * adds the parameter num to the beginning of the list.
 	 * if the list is full then the size increases
@@ -120,6 +121,7 @@ public class SimpleList
 	/*
 	 * if the list is empty returns -1
 	 * otherwise, returns the first element in the list
+	 * 
 	 */
 	public int first()
 	{
