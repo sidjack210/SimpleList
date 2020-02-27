@@ -118,17 +118,31 @@ public class SimpleList
 	}
 	
 	/*
-	 * if the list is empty throws an exception
+	 * if the list is empty returns -1
 	 * otherwise, returns the first element in the list
 	 */
 	public int first()
 	{
 		if (count == 0)
 		{
-			throw new RuntimeException("list is empty");
+			return -1;
 		}
 		
 		return list[0];
+	}
+	
+	/*
+	 * if the list is empty returns -1
+	 * otherwise, returns the last element in the list
+	 */
+	public int last()
+	{
+		if(count == 0)
+		{
+			return -1;
+		}
+		
+		return list[list.length];
 	}
 	
 	/**
